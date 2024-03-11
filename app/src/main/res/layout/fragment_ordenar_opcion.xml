@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".ui.ordenar_opcion.OrdenarOpcionFragment">
+
+    <LinearLayout
+        android:id="@+id/fr_ordenar_opcion_contenedor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sh_contenedores"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- titulo -->
+        <TextView
+            android:id="@+id/fr_ordenar_opcion_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/titulos"
+            android:textAlignment="center"
+            android:layout_marginBottom="10dp" />
+
+
+        <!--    TACOS, TORTAS, BURRITOS     -->
+        <LinearLayout
+            android:id="@+id/fr_ordenar_opcion_subcontenedor1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!-- carne -->
+            <TextView
+                android:id="@+id/fr_ordenar_opcion_subtitulo1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fr_ordenar_opcion_subtitulo1"
+                android:layout_marginTop="10dp"
+                android:textAppearance="@style/subtitulos"
+                android:textAlignment="center"
+                android:layout_marginBottom="10dp" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alignmentMode="alignBounds"
+                android:background="@drawable/sh_edittext"
+                android:gravity="center"
+                android:columnCount="3">
+
+                <CheckBox
+                    android:id="@+id/fr_ordenar_opcion_seccion_opcion1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="@string/fr_ordenar_opcion_subtitulo1_opcion1"
+                    android:maxLines="2"
+                    android:textAppearance="@style/texto"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1" />
+
+                <CheckBox
+                    android:id="@+id/fr_ordenar_opcion_seccion_opcion2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="@string/fr_ordenar_opcion_subtitulo1_opcion2"
+                    android:maxLines="2"
+                    android:textAppearance="@style/texto"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1" />
+
+                <CheckBox
+                    android:id="@+id/fr_ordenar_opcion_seccion_opcion3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="@string/fr_ordenar_opcion_subtitulo1_opcion3"
+                    android:maxLines="2"
+                    android:textAppearance="@style/texto"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1" />
+
+                <RelativeLayout
+                    android:id="@+id/cantidad_bi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:visibility="invisible"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1">
+
+                    <TextView
+                        android:id="@+id/texto_cantidadBi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:autofillHints=""
+                        android:background="@color/white"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:text="@string/button_cantidad"
+                        android:textAlignment="center"
+                        tools:ignore="LabelFor"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/cantidad_mas1Bi" />
+
+                    <ImageButton
+                        android:id="@+id/cantidad_mas1Bi"
+                        android:layout_width="30dp"
+                        android:layout_height="15dp"
+                        android:background="@color/white"
+                        android:src="@drawable/ic_button_arrowup"
+                        android:contentDescription="@string/espacio"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_toEndOf="@id/texto_cantidadBi"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/texto_cantidadBi"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/cantidad_menos1Bi"
+                        android:layout_width="30dp"
+                        android:layout_height="15dp"
+                        android:background="@color/white"
+                        android:src="@drawable/ic_button_arrowdown"
+                        android:contentDescription="@string/espacio"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_toEndOf="@id/texto_cantidadBi"
+                        android:layout_below="@+id/cantidad_mas1Bi"
+                        app:layout_constraintTop_toBottomOf="@+id/cantidad_mas1Bi"
+                        app:layout_constraintStart_toEndOf="@+id/texto_cantidadBi"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/cantidad_co"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:visibility="invisible"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1">
+
+                    <TextView
+                        android:id="@+id/texto_cantidadCo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:autofillHints=""
+                        android:background="@color/white"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:text="@string/button_cantidad"
+                        android:textAlignment="center"
+                        tools:ignore="LabelFor"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/cantidad_mas1Co" />
+
+                    <ImageButton
+                        android:id="@+id/cantidad_mas1Co"
+                        android:layout_width="30dp"
+                        android:layout_height="15dp"
+                        android:background="@color/white"
+                        android:src="@drawable/ic_button_arrowup"
+                        android:contentDescription="@string/espacio"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_toEndOf="@id/texto_cantidadCo"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/texto_cantidadCo"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/cantidad_menos1Co"
+                        android:layout_width="30dp"
+                        android:layout_height="15dp"
+                        android:background="@color/white"
+                        android:src="@drawable/ic_button_arrowdown"
+                        android:contentDescription="@string/espacio"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_toEndOf="@id/texto_cantidadCo"
+                        android:layout_below="@+id/cantidad_mas1Co"
+                        app:layout_constraintTop_toBottomOf="@+id/cantidad_mas1Co"
+                        app:layout_constraintStart_toEndOf="@+id/texto_cantidadCo"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/cantidad_ca"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:visibility="invisible"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1">
+
+                    <TextView
+                        android:id="@+id/texto_cantidadCa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:autofillHints=""
+                        android:background="@color/white"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:text="@string/button_cantidad"
+                        android:textAlignment="center"
+                        tools:ignore="LabelFor"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/cantidad_mas1Ca" />
+
+                    <ImageButton
+                        android:id="@+id/cantidad_mas1Ca"
+                        android:layout_width="30dp"
+                        android:layout_height="15dp"
+                        android:background="@color/white"
+                        android:src="@drawable/ic_button_arrowup"
+                        android:contentDescription="@string/espacio"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_toEndOf="@id/texto_cantidadCa"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/texto_cantidadCa"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/cantidad_menos1Ca"
+                        android:layout_width="30dp"
+                        android:layout_height="15dp"
+                        android:background="@color/white"
+                        android:src="@drawable/ic_button_arrowdown"
+                        android:contentDescription="@string/espacio"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_toEndOf="@id/texto_cantidadCa"
+                        android:layout_below="@+id/cantidad_mas1Ca"
+                        app:layout_constraintTop_toBottomOf="@+id/cantidad_mas1Ca"
+                        app:layout_constraintStart_toEndOf="@+id/texto_cantidadCa"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </RelativeLayout>
+
+            </GridLayout>
+
+
+            <!-- verdura -->
+            <TextView
+                android:id="@+id/fr_ordenar_opcion_subtitulo2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fr_ordenar_opcion_subtitulo2"
+                android:layout_marginTop="10dp"
+                android:textAppearance="@style/subtitulos"
+                android:textAlignment="center"
+                android:layout_marginBottom="10dp" />
+
+            <TableLayout
+                android:id="@+id/fr_ordenar_opcion_seccion2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/sh_edittext">
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    tools:ignore="UselessParent">
+
+                    <CheckBox
+                        android:id="@+id/fr_ordenar_opcion_seccion2_opcion1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="@string/fr_ordenar_opcion_subtitulo2_opcion1"
+                        android:maxLines="2"
+                        android:textAppearance="@style/texto"
+                        android:layout_marginTop="10dp" />
+
+                    <CheckBox
+                        android:id="@+id/fr_ordenar_opcion_seccion2_opcion2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="@string/fr_ordenar_opcion_subtitulo2_opcion2"
+                        android:maxLines="2"
+                        android:textAppearance="@style/texto"
+                        android:layout_marginTop="10dp" />
+
+                    <CheckBox
+                        android:id="@+id/fr_ordenar_opcion_seccion2_opcion3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="@string/fr_ordenar_opcion_subtitulo2_opcion3"
+                        android:maxLines="2"
+                        android:textAppearance="@style/texto"
+                        android:layout_marginTop="10dp" />
+
+                </TableRow>
+
+            </TableLayout>
+
+
+            <!-- salsa -->
+            <TextView
+                android:id="@+id/fr_ordenar_opcion_subtitulo3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fr_ordenar_opcion_subtitulo3"
+                android:layout_marginTop="10dp"
+                android:textAppearance="@style/subtitulos"
+                android:textAlignment="center"
+                android:layout_marginBottom="10dp" />
+
+            <TableLayout
+                android:id="@+id/fr_ordenar_opcion_seccion3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/sh_edittext">
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal">
+
+                    <CheckBox
+                        android:id="@+id/fr_ordenar_opcion_seccion3_opcion1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="@string/fr_ordenar_opcion_subtitulo3_opcion1"
+                        android:maxLines="2"
+                        android:layout_marginEnd="65dp"
+                        android:textAppearance="@style/texto"
+                        android:layout_marginTop="10dp" />
+
+                    <CheckBox
+                        android:id="@+id/fr_ordenar_opcion_seccion3_opcion2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="@string/fr_ordenar_opcion_subtitulo3_opcion2"
+                        android:maxLines="2"
+                        android:textAppearance="@style/texto"
+                        android:layout_marginTop="10dp" />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+
+        <!--    BEBIDAS     -->
+        <LinearLayout
+            android:id="@+id/fr_ordenar_opcion_subcontenedor2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <CheckBox
+                android:id="@+id/fr_ordenar_opcion_bebida1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/pepsi"
+                android:layout_marginTop="10dp"
+                android:text="@string/fr_ordenar_opcion_bebida1"
+                android:textAppearance="@style/texto"
+                android:background="@drawable/sh_contenedores_bebidas" />
+
+            <CheckBox
+                android:id="@+id/fr_ordenar_opcion_bebida2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/coca"
+                android:layout_marginTop="10dp"
+                android:text="@string/fr_ordenar_opcion_bebida2"
+                android:textAppearance="@style/texto"
+                android:background="@drawable/sh_contenedores_bebidas" />
+
+            <CheckBox
+                android:id="@+id/fr_ordenar_opcion_bebida3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/sprite"
+                android:layout_marginTop="10dp"
+                android:text="@string/fr_ordenar_opcion_bebida3"
+                android:textAppearance="@style/texto"
+                android:background="@drawable/sh_contenedores_bebidas" />
+
+            <CheckBox
+                android:id="@+id/fr_ordenar_opcion_bebida4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/manzanita"
+                android:layout_marginTop="10dp"
+                android:text="@string/fr_ordenar_opcion_bebida4"
+                android:textAppearance="@style/texto"
+                android:background="@drawable/sh_contenedores_bebidas" />
+
+            <CheckBox
+                android:id="@+id/fr_ordenar_opcion_bebida5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/fanta"
+                android:layout_marginTop="10dp"
+                android:text="@string/fr_ordenar_opcion_bebida5"
+                android:textAppearance="@style/texto"
+                android:background="@drawable/sh_contenedores_bebidas" />
+
+            <CheckBox
+                android:id="@+id/fr_ordenar_opcion_bebida6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/awa"
+                android:layout_marginTop="10dp"
+                android:text="@string/fr_ordenar_opcion_bebida6"
+                android:textAppearance="@style/texto"
+                android:background="@drawable/sh_contenedores_bebidas" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/fr_ordenar_opcion_boton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fr_ordenar_opcion_agregar"
+        android:textAppearance="@style/botones"
+        android:layout_marginTop="40dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/sh_boton"
+        app:layout_constraintTop_toBottomOf="@id/fr_ordenar_opcion_contenedor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

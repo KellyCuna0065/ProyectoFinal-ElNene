@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    tools:context=".ui.pagar_opcion.PagarOpcionFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fr_pagar_opcion_contenedor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sh_contenedores"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/fr_pagar_opcion_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fr_pagar_opcion_titulo"
+            android:textAppearance="@style/titulos"
+            android:textAlignment="center"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <!-- opciones: nueva tarjeta -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/fr_pagar_opcion_titulo"
+            android:visibility="visible">
+
+            <!-- campo 1 -->
+            <TextView
+                android:id="@+id/fr_pagar_opcion_subtitulo1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fr_pagar_codigo_subtitulo1"
+                android:layout_marginTop="15dp"
+                android:textAppearance="@style/texto"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/fr_pagar_opcion_edtx1"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:hint="@string/espacio"
+                android:inputType="textPersonName"
+                android:background="@drawable/sh_edittext"
+                android:importantForAutofill="no"
+                app:layout_constraintTop_toBottomOf="@+id/fr_pagar_opcion_subtitulo1" />
+
+
+            <!-- campo 2 -->
+            <TextView
+                android:id="@+id/fr_pagar_opcion_subtitulo2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fr_pagar_opcion_subtitulo2"
+                android:layout_marginTop="15dp"
+                android:textAppearance="@style/texto"
+                app:layout_constraintTop_toBottomOf="@id/fr_pagar_opcion_edtx1" />
+
+            <EditText
+                android:id="@+id/fr_pagar_opcion_edtx2"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:hint="@string/espacio"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/sh_edittext"
+                android:importantForAutofill="no"
+                app:layout_constraintTop_toBottomOf="@+id/fr_pagar_opcion_subtitulo2" />
+
+            <!-- campo 3 -->
+            <TextView
+                android:id="@+id/fr_pagar_opcion_subtitulo3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fr_pagar_opcion_subtitulo3"
+                android:textAppearance="@style/texto"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@id/fr_pagar_opcion_edtx2"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/fr_pagar_opcion_edtx3"
+                android:layout_width="170dp"
+                android:layout_height="36dp"
+                android:hint="@string/espacio"
+                android:inputType="phone"
+                android:background="@drawable/sh_edittext"
+                android:importantForAutofill="yes"
+                app:layout_constraintTop_toBottomOf="@+id/fr_pagar_opcion_subtitulo3"
+                app:layout_constraintStart_toStartOf="parent"
+                android:autofillHints="" />
+
+
+            <!-- campo 4-->
+            <TextView
+                android:id="@+id/fr_pagar_opcion_subtitulo4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/fr_pagar_opcion_subtitulo4"
+                android:textAppearance="@style/texto"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/fr_pagar_opcion_subtitulo3"
+                app:layout_constraintTop_toBottomOf="@id/fr_pagar_opcion_edtx2" />
+
+            <EditText
+                android:id="@+id/fr_pagar_opcion_edtx4"
+                android:layout_width="60dp"
+                android:layout_height="36dp"
+                android:hint="@string/espacio"
+                android:inputType="phone"
+                android:background="@drawable/sh_edittext"
+                android:importantForAutofill="yes"
+                app:layout_constraintTop_toBottomOf="@+id/fr_pagar_opcion_subtitulo3"
+                app:layout_constraintStart_toEndOf="@+id/fr_pagar_opcion_edtx3"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:autofillHints="" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/fr_pagar_opcion_boton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fr_carrito_pagar"
+        android:textAppearance="@style/botones"
+        android:background="@drawable/sh_boton"
+        app:layout_constraintTop_toBottomOf="@id/fr_pagar_opcion_contenedor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.pagar.PagarFragment">
+
+
+    <!--    CONTENEDOR 1    -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="20dp"
+        android:id="@+id/fr_pagar_contenedor1"
+        android:background="@drawable/sh_contenedores">
+
+        <!-- Titulo -->
+        <TextView
+            android:id="@+id/fr_pagar_titulo1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fr_pagar_titulo1"
+            android:textAlignment="center"
+            android:textAppearance="@style/titulos"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Nombre -->
+        <TextView
+            android:id="@+id/fr_pagar_subtitulo1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fr_pagar_subtitulo1"
+            android:layout_marginTop="15dp"
+            android:textAppearance="@style/texto"
+            app:layout_constraintTop_toBottomOf="@id/fr_pagar_titulo1" />
+
+        <EditText
+            android:id="@+id/fr_pagar_edtx1"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:hint="@string/espacio"
+            android:inputType="textPersonName"
+            android:background="@drawable/sh_edittext"
+            android:importantForAutofill="no"
+            app:layout_constraintTop_toBottomOf="@+id/fr_pagar_subtitulo1" />
+
+        <!-- Correo -->
+        <TextView
+            android:id="@+id/fr_pagar_subtitulo2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fr_pagar_subtitulo2"
+            android:layout_marginTop="15dp"
+            android:textAppearance="@style/texto"
+            app:layout_constraintTop_toBottomOf="@id/fr_pagar_edtx1" />
+
+        <EditText
+            android:id="@+id/fr_pagar_edtx2"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:hint="@string/espacio"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/sh_edittext"
+            android:importantForAutofill="no"
+            app:layout_constraintTop_toBottomOf="@+id/fr_pagar_subtitulo2" />
+
+        <!-- Telefono -->
+        <TextView
+            android:id="@+id/fr_pagar_subtitulo3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fr_pagar_subtitulo3"
+            android:textAppearance="@style/texto"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@id/fr_pagar_edtx2" />
+
+        <EditText
+            android:id="@+id/fr_pagar_edtx3"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:hint="@string/espacio"
+            android:inputType="phone"
+            android:background="@drawable/sh_edittext"
+            android:importantForAutofill="yes"
+            app:layout_constraintTop_toBottomOf="@+id/fr_pagar_subtitulo3"
+            android:autofillHints="" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--    CONTENEDOR 2    -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fr_pagar_contenedor2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/sh_contenedores"
+        app:layout_constraintTop_toBottomOf="@id/fr_pagar_contenedor1">
+
+        <!-- Titulo -->
+        <TextView
+            android:id="@+id/fr_pagar_titulo2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fr_pagar_titulo2"
+            android:textAlignment="center"
+            android:textAppearance="@style/titulos"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/fr_pagar_titulo2">
+
+            <RadioButton
+                android:id="@+id/fr_pagar_opcion1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/mastercard"
+                android:layout_marginTop="10dp"
+                android:text="@string/fr_pagar_opcion1"
+                android:textAppearance="@style/texto"
+                android:background="@drawable/sh_contenedores_bebidas" />
+
+            <RadioButton
+                android:id="@+id/fr_pagar_opcion2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/visa"
+                android:layout_marginTop="10dp"
+                android:text="@string/fr_pagar_opcion2"
+                android:textAppearance="@style/texto"
+                android:background="@drawable/sh_contenedores_bebidas" />
+
+            <RadioButton
+                android:id="@+id/fr_pagar_opcion3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/paypal"
+                android:layout_marginTop="10dp"
+                android:text="@string/fr_pagar_opcion3"
+                android:textAppearance="@style/texto"
+                android:background="@drawable/sh_contenedores_bebidas" />
+
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

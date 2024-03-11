@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.codigo.CodigoFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fr_codigo_true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sh_contenedores"
+        android:layout_margin="20dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/fr_codigo_texto1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fr_codigo_texto1"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:textAppearance="@style/titulos"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fr_codigo_texto2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="@string/fr_codigo_codigo"
+            android:textAlignment="center"
+            android:textAppearance="@style/texto"
+            app:layout_constraintTop_toBottomOf="@+id/fr_codigo_texto1" />
+
+        <TextView
+            android:id="@+id/fr_codigo_campo1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:textAppearance="@style/texto"
+            android:background="@drawable/sh_edittext"
+            app:layout_constraintTop_toBottomOf="@+id/fr_codigo_texto2" />
+
+        <TextView
+            android:id="@+id/fr_codigo_texto3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="@string/fr_codigo_texto2"
+            android:textAlignment="center"
+            android:textAppearance="@style/texto"
+            app:layout_constraintTop_toBottomOf="@+id/fr_codigo_campo1" />
+
+        <TextView
+            android:id="@+id/fr_codigo_recogido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/fr_codigo_boton"
+            android:textAppearance="@style/botones"
+            app:layout_constraintTop_toBottomOf="@+id/fr_codigo_texto3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/sh_boton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fr_codigo_false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/text_codigo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="@string/fr_codigo_sincodigo"
+            android:maxLines="2"
+            android:textAppearance="@style/texto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fr_codigo_comprar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Hacer pedido"
+            android:textAppearance="@style/botones"
+            app:layout_constraintTop_toBottomOf="@+id/text_codigo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/sh_boton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

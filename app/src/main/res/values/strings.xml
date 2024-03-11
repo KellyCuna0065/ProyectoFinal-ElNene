@@ -1,0 +1,90 @@
+<resources>
+    <string name="app_name">ProyectoFinal</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Taqueria El Nene</string>
+    <string name="nav_header_subtitle">La Moncada, Tarimoro</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="espacio">" "</string>
+    <string name="action_carrito">Carrito</string>
+
+
+    <string name="menu_principal">Principal</string>
+    <string name="menu_carta">Menú</string>
+    <string name="menu_ordenar">Hacer Pedido</string>
+    <string name="menu_codigo">Ver Código</string>
+    <string name="menu_pagar">Pagar</string>
+    <string name="menu_pagar_confirmado">Pago Realizado</string>
+
+
+
+    <string name="fr_carrito_pagar">Pagar</string>
+
+
+
+    <string name="fr_pagar_titulo1">Información Personal</string>
+    <string name="fr_pagar_subtitulo1">Nombre</string>
+    <string name="fr_pagar_subtitulo2">Correo</string>
+    <string name="fr_pagar_subtitulo3">Teléfono</string>
+    <string name="fr_pagar_titulo2">Método de Pago</string>
+    <string name="fr_pagar_confirmado_titulo">Su pago se ha realizado con éxito!</string>
+    <string name="fr_pagar_confirmado_texto1">Su pedido estará listo en...</string>
+    <string name="fr_pagar_confirmado_texto2">Su código es</string>
+    <string name="fr_pagar_confirmado_campo3">Presente su código para poder recoger su comida</string>
+    <string name="fr_pagar_confirmado_boton">Volver a inicio</string>
+
+
+
+    <string name="fr_ordenar_opcion1">Tacos</string>
+    <string name="fr_ordenar_opcion2">Tortas</string>
+    <string name="fr_ordenar_opcion3">Burritos</string>
+    <string name="fr_ordenar_opcion4">Bebidas</string>
+    <string name="fr_ordenar_opcion_agregar">Agregar a carrito</string>
+    <string name="fr_ordenar_boton">Ver carrito</string>
+
+    <string name="fr_ordenar_opcion_subtitulo1">Carne</string>
+    <string name="fr_ordenar_opcion_subtitulo1_opcion1">Bistec</string>
+    <string name="fr_ordenar_opcion_subtitulo1_opcion2">Costilla</string>
+    <string name="fr_ordenar_opcion_subtitulo1_opcion3">Cabeza</string>
+
+    <string name="fr_ordenar_opcion_subtitulo2">Verdura</string>
+    <string name="fr_ordenar_opcion_subtitulo2_opcion1">Cebolla</string>
+    <string name="fr_ordenar_opcion_subtitulo2_opcion2">Cilantro</string>
+    <string name="fr_ordenar_opcion_subtitulo2_opcion3">Cebolla Asada</string>
+
+    <string name="fr_ordenar_opcion_subtitulo3">Salsa</string>
+    <string name="fr_ordenar_opcion_subtitulo3_opcion1">Roja</string>
+    <string name="fr_ordenar_opcion_subtitulo3_opcion2">Verde</string>
+
+    <string name="fr_ordenar_opcion_bebida1">Pepsi(330 mL)</string>
+    <string name="fr_ordenar_opcion_bebida2">Coca Cola (330 mL)</string>
+    <string name="fr_ordenar_opcion_bebida3">Sprite (330 mL)</string>
+    <string name="fr_ordenar_opcion_bebida4">Manzanita Sol (330 mL)</string>
+    <string name="fr_ordenar_opcion_bebida5">Fanta (330 mL)</string>
+    <string name="fr_ordenar_opcion_bebida6">Agua (1 L)</string>
+
+
+    <string name="fr_codigo_texto1">Presente su código al recoger su comida!</string>
+    <string name="fr_codigo_texto2">Recuerde confirmar que ha recogido su pedido</string>
+    <string name="fr_codigo_sincodigo">No tiene un código. Realice una compra primero.</string>
+    <string name="fr_codigo_boton">He recogido mi pedido</string>
+    <string name="fr_codigo_codigo">Codigo:</string>
+
+
+
+    <string name="fr_pagar_opcion_titulo">Nueva tarjeta</string>
+    <string name="fr_pagar_codigo_subtitulo1">Titular de la tarjeta</string>
+    <string name="fr_pagar_opcion_subtitulo2">Numero de la tarjeta</string>
+    <string name="fr_pagar_opcion_subtitulo3">Fecha de vencimiento</string>
+    <string name="fr_pagar_opcion_subtitulo4">CVV</string>
+    <string name="fr_pagar_opcion_continuar">Continuar</string>
+    <string name="fr_pagar_opcion1">Agregar nueva tarjeta</string>
+    <string name="fr_pagar_opcion2">Pagar con VISA</string>
+    <string name="fr_pagar_opcion3">Pagar con PayPal</string>
+    <string name="button_cantidad">0</string>
+    <string name="fr_carrito_cant">$</string>
+    <string name="fr_carrito_contenedor2_texto">No hay pedidos en el carrito</string>
+    <string name="total">total</string>
+
+</resources>

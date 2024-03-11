@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_principal">
+
+    <fragment
+        android:id="@+id/nav_carrito"
+        android:name="com.example.proyectofinal.ui.carrito.CarritoFragment"
+        android:label="@string/action_carrito"
+        tools:layout="@layout/fragment_carrito">
+        <argument
+            android:name="producto"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_nav_carrito_to_nav_pagar"
+            app:destination="@id/nav_pagar" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_carta"
+        android:name="com.example.proyectofinal.ui.carta.CartaFragment"
+        android:label="@string/menu_carta"
+        tools:layout="@layout/fragment_carta" />
+
+    <fragment
+        android:id="@+id/nav_codigo"
+        android:name="com.example.proyectofinal.ui.codigo.CodigoFragment"
+        android:label="@string/menu_codigo"
+        tools:layout="@layout/fragment_codigo">
+        <argument
+            android:name="codigo"
+            app:argType="string"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_nav_codigo_to_nav_principal"
+            app:destination="@+id/nav_principal" />
+        <action
+            android:id="@+id/action_nav_codigo_to_nav_ordenar"
+            app:destination="@+id/nav_ordenar" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_ordenar"
+        android:name="com.example.proyectofinal.ui.ordenar.OrdenarFragment"
+        android:label="@string/menu_ordenar"
+        tools:layout="@layout/fragment_ordenar">
+        <action
+            android:id="@+id/action_nav_ordenar_to_nav_ordenar_opcion"
+            app:destination="@id/nav_ordenar_opcion" />
+
+        <action
+            android:id="@+id/action_nav_ordenar_to_nav_carrito"
+            app:destination="@id/nav_carrito" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_ordenar_opcion"
+        android:name="com.example.proyectofinal.ui.ordenar_opcion.OrdenarOpcionFragment"
+        android:label="@string/menu_ordenar"
+        tools:layout="@layout/fragment_ordenar_opcion">
+        <argument
+            android:name="opcion"
+            app:argType="string" />
+        <argument
+            android:name="visible"
+            app:argType="boolean" />
+        <argument
+            android:name="img"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_nav_ordenar_opcion_to_nav_ordenar"
+            app:destination="@id/nav_ordenar" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_pagar"
+        android:name="com.example.proyectofinal.ui.pagar.PagarFragment"
+        android:label="@string/menu_pagar"
+        tools:layout="@layout/fragment_pagar">
+        <action
+            android:id="@+id/action_nav_pagar_to_nav_pagar_opcion"
+            app:destination="@id/nav_pagar_opcion" />
+        <action
+            android:id="@+id/action_nav_pagar_to_nav_pagar_confirmado"
+            app:destination="@+id/nav_pagar_confirmado" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_pagar_confirmado"
+        android:name="com.example.proyectofinal.ui.pagar_confirmado.PagarConfirmadoFragment"
+        android:label="@string/menu_pagar_confirmado"
+        tools:layout="@layout/fragment_pagar_confirmado">
+        <action
+            android:id="@+id/action_nav_pagar_confirmado_to_nav_principal"
+            app:destination="@+id/nav_principal" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_pagar_opcion"
+        android:name="com.example.proyectofinal.ui.pagar_opcion.PagarOpcionFragment"
+        android:label="@string/menu_pagar"
+        tools:layout="@layout/fragment_pagar_opcion">
+        <action
+            android:id="@+id/action_nav_pagar_opcion_to_nav_pagar_confirmado"
+            app:destination="@id/nav_pagar_confirmado" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_principal"
+        android:name="com.example.proyectofinal.ui.principal.PrincipalFragment"
+        android:label="@string/menu_principal"
+        tools:layout="@layout/fragment_principal">
+        <action
+            android:id="@+id/action_nav_principal_to_nav_codigo"
+            app:destination="@id/nav_codigo" />
+        <action
+            android:id="@+id/action_nav_principal_to_nav_carta"
+            app:destination="@id/nav_carta" />
+        <action
+            android:id="@+id/action_nav_principal_to_nav_carrito"
+            app:destination="@id/nav_carrito" />
+        <action
+            android:id="@+id/action_nav_principal_to_nav_ordenar"
+            app:destination="@id/nav_ordenar" />
+    </fragment>
+
+</navigation>
